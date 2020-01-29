@@ -11,4 +11,10 @@ class School
     @student_names << student_name
   end
 
+  def end_time
+    start_time_integer = @start_time.gsub(':00', '').to_i
+    end_time_integer = start_time_integer + @hours_in_school_day
+    "#{end_time_integer}:00"
+  end
+
 end
