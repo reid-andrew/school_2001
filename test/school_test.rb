@@ -70,7 +70,7 @@ class SchoolTest < Minitest::Test
     school.add_student_name('Aurora')
     school.add_student_name('tim')
     school.add_student_name('megan')
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
 
     assert_equal ["Aurora", "Tim", "Megan"], school.standard_student_names
   end
@@ -78,7 +78,7 @@ class SchoolTest < Minitest::Test
   def test_if_end_time_is_in_clock_time
     # skip
     school = School.new('9:00', 7)
-
+    require "pry"; binding.pry
     assert_equal '4:00', school.convert_end_time_to_clock_time
 
   end

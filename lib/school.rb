@@ -27,4 +27,11 @@ class School
     end
   end
 
+  def convert_end_time_to_clock_time
+    start_time_integer = @start_time.gsub(':00', '').to_i
+    end_time_integer = start_time_integer + @hours_in_school_day
+    end_time_integer = end_time_integer > 12 ? end_time_integer - 12 : end_time_integer
+    "#{end_time_integer}:00"
+  end
+
 end
