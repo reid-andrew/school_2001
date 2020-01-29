@@ -57,8 +57,10 @@ class SchoolTest < Minitest::Test
   def test_if_school_is_full_time
     #skip
     school1 = School.new('9:00', 7)
+    school2 = School.new('9:00', 3)
 
     assert school1.is_full_time?
+    refute school2.is_full_time?
 
   end
 end
