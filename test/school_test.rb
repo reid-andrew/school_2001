@@ -55,12 +55,23 @@ class SchoolTest < Minitest::Test
   end
 
   def test_if_school_is_full_time
-    #skip
+    skip
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
 
     assert school1.is_full_time?
     refute school2.is_full_time?
+  end
+
+  def test_if_names_are_standardized
+    skip
+    school = School.new('9:00', 7)
+
+    school.add_student_name('Aurora')
+    school.add_student_name('tim')
+    school.add_student_name('megan')
+
+    assert_equal ["Aurora", "Tim", "Megan"], school1.standard_student_names
 
   end
 end
