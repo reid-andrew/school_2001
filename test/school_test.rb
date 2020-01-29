@@ -64,14 +64,15 @@ class SchoolTest < Minitest::Test
   end
 
   def test_if_names_are_standardized
-    skip
+    # skip
     school = School.new('9:00', 7)
 
     school.add_student_name('Aurora')
     school.add_student_name('tim')
     school.add_student_name('megan')
+    require "pry"; binding.pry
 
-    assert_equal ["Aurora", "Tim", "Megan"], school1.standard_student_names
+    assert_equal ["Aurora", "Tim", "Megan"], school.standard_student_names
 
   end
 end
