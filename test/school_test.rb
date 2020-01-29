@@ -58,7 +58,7 @@ class SchoolTest < Minitest::Test
     #skip
     school1 = School.new('9:00', 7)
 
-    assert school.is_full_time?
+    assert school1.is_full_time?
 
   end
 end
